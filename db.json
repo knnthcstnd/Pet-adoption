@@ -4,8 +4,8 @@
       "name": "nuni",
       "breed": "pomeranian",
       "age": 1,
-      "status": "Available",
-      "id": "jPJwmQUyghc"
+      "status": "Adopted",
+      "id": "J33YN9B1m6I"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

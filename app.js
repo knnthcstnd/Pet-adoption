@@ -5,7 +5,7 @@ const petContainer = document.getElementById("petContainer");
 
 document.addEventListener("DOMContentLoaded", loadPets);
 
-// Close any open dropdown when clicking outside
+
 document.addEventListener("click", () => {
   document.querySelectorAll(".status-dropdown.open").forEach(d => d.classList.remove("open"));
 });
@@ -119,13 +119,13 @@ function renderCard(pet) {
     </div>
   `;
 
-  // Toggle dropdown open/close
+  
   const dropdown = card.querySelector(".status-dropdown");
   const trigger = card.querySelector(".dropdown-trigger");
 
   trigger.addEventListener("click", (e) => {
     e.stopPropagation();
-    // Close all other open dropdowns
+    
     document.querySelectorAll(".status-dropdown.open").forEach(d => {
       if (d !== dropdown) d.classList.remove("open");
     });
@@ -133,7 +133,7 @@ function renderCard(pet) {
     trigger.setAttribute("aria-expanded", isOpen);
   });
 
-  // Status option clicks
+  
   card.querySelectorAll(".dropdown-item").forEach(item => {
     item.addEventListener("click", async (e) => {
       e.stopPropagation();
@@ -154,7 +154,7 @@ function renderCard(pet) {
     });
   });
 
-  // Delete button
+  
   card.querySelector(".del-btn").addEventListener("click", async () => {
     if (!confirm(`Delete ${pet.name}?`)) return;
     await fetch(`${API_URL}/${pet.id}`, { method: "DELETE" });
@@ -176,7 +176,7 @@ function updateStats(pets) {
   if (pills[2]) pills[2].textContent = adopted;
 }
 
-// ─── TOAST ───
+
 let toastTimer;
 function showToast(msg) {
   let toast = document.getElementById("toast");

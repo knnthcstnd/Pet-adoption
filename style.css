@@ -147,7 +147,7 @@ header::after {
   font-weight:700;
 }
 
-/* ─── LAYOUT ─── */
+
 main {
   position:relative; z-index:1;
   max-width:1280px;
@@ -159,7 +159,7 @@ main {
   align-items:start;
 }
 
-/* ─── FORM ─── */
+
 .form-section {
   background:var(--white);
   border-radius:var(--r-lg);
@@ -241,7 +241,7 @@ input:focus, select:focus {
 .add-btn:hover { transform:translateY(-3px) scale(1.01); box-shadow:0 8px 24px rgba(76,175,80,.45); }
 .add-btn:active { transform:scale(.98); }
 
-/* ─── LISTINGS ─── */
+
 .pets-section { min-width:0; }
 
 .sec-head {
@@ -270,14 +270,14 @@ input:focus, select:focus {
 .ftab.on { background:var(--brown); color:var(--white); box-shadow:0 2px 10px rgba(59,42,26,.28); }
 .ftab:hover:not(.on) { background:var(--sand2); color:var(--brown2); }
 
-/* ─── GRID ─── */
+
 .pet-grid {
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
   gap:22px;
 }
 
-/* ─── CARD ─── */
+
 .pet-card {
   background:var(--white);
   border-radius:var(--r-lg);
@@ -341,14 +341,14 @@ input:focus, select:focus {
 .det-k { color:var(--gray); font-weight:600; min-width:38px; }
 .det-v { color:var(--brown); font-weight:700; }
 
-/* ─── CARD FOOTER ─── */
+
 .card-foot {
   padding:14px 22px 20px;
   display:flex; gap:9px;
   position:relative;
 }
 
-/* ─── STATUS DROPDOWN ─── */
+
 .status-dropdown {
   position:relative;
   flex:1;
@@ -427,7 +427,7 @@ input:focus, select:focus {
 .dropdown-item.pending-item:hover   { color:#E65100; }
 .dropdown-item.adopted-item:hover   { color:#B71C1C; }
 
-/* ─── DELETE BTN ─── */
+
 .del-btn {
   flex:1; padding:10px 12px;
   background:rgba(239,83,80,.08);
@@ -447,13 +447,13 @@ input:focus, select:focus {
   box-shadow:0 6px 16px rgba(239,83,80,.35);
 }
 
-/* ─── EMPTY ─── */
+
 .empty { grid-column:1/-1; padding:70px 20px; text-align:center; }
 .empty-ico { font-size:3.5rem; margin-bottom:16px; }
 .empty h3 { font-family:'Fraunces',serif; font-size:1.3rem; font-weight:700; color:var(--gray); }
 .empty p  { font-size:.85rem; color:var(--gray2); margin-top:6px; }
 
-/* ─── TOAST ─── */
+
 .toast {
   position:fixed; bottom:36px; right:36px;
   background:var(--brown); color:var(--white);
@@ -469,7 +469,7 @@ input:focus, select:focus {
 }
 .toast.show { transform:translateY(0); opacity:1; }
 
-/* ─── RESPONSIVE ─── */
+
 @media (max-width:960px) {
   main { grid-template-columns:1fr; padding:28px 24px 80px; gap:32px; }
   .form-section { position:static; }
