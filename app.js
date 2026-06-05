@@ -71,6 +71,7 @@ function renderCard(pet) {
   const emoji = pet.breed.toLowerCase().includes("cat") ? "🐱"
     : pet.breed.toLowerCase().includes("bird") ? "🐦"
     : pet.breed.toLowerCase().includes("rabbit") ? "🐰"
+    : pet.breed.toLowerCase().includes("turtle") ? "🐢"
     : "🐶";
 
   const card = document.createElement("article");
