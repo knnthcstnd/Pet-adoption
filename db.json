@@ -1,0 +1,12 @@
+{
+  "pets": [
+    {
+      "name": "nuni",
+      "breed": "pomeranian",
+      "age": 1,
+      "status": "Available",
+      "id": "jPJwmQUyghc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Adoption Listings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+
+  <section class="form-section">
+    <div class="form-top">
+      <h2>Add a New Pet</h2>
+      <p>Fill in the details below</p>
+    </div>
+    <form id="petForm">
+      <div class="form-group">
+        <label for="petName">Pet Name</label>
+        <input type="text" id="petName" placeholder="e.g. Nuni" required>
+      </div>
+      <div class="form-group">
+        <label for="breed">Breed</label>
+        <input type="text" id="breed" placeholder="e.g. Pomeranian" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age (years)</label>
+        <input type="number" id="age" placeholder="1" required min="0">
+      </div>
+      <div class="form-group">
+        <label for="status">Adoption Status</label>
+        <div class="sel-wrap">
+          <select id="status">
+            <option value="Available">Available</option>
+            <option value="Pending">Pending</option>
+            <option value="Adopted">Adopted</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="add-btn">🐾 Add Pet</button>
+    </form>
+  </section>
+
+  <section class="pets-section">
+    <div class="sec-head">
+      <h2>Listings</h2>
+    </div>
+    <div id="petContainer" class="pet-grid"></div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
