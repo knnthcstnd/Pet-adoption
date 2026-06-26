@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pet Adoption Listings</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — PawHaven</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<header>
+  <div class="header-inner">
+    <a href="landing.html" class="brand">
+      <div class="brand-icon">🐾</div>
+      <div class="brand-copy">
+        <h1>PawHaven</h1>
+        <p>Every pet deserves a loving home</p>
+      </div>
+    </a>
+    <div class="header-pills">
+      <div class="pill"><span class="n" id="statTotal">0</span><span class="l">Total</span></div>
+      <div class="pill"><span class="n" id="statAvailable">0</span><span class="l">Available</span></div>
+      <div class="pill"><span class="n" id="statPending">0</span><span class="l">Pending</span></div>
+      <div class="pill"><span class="n" id="statAdopted">0</span><span class="l">Adopted</span></div>
+    </div>
+  </div>
+</header>
 
 <main>
 
   <section class="form-section">
     <div class="form-top">
-      <h2>Add a New Pet</h2>
-      <p>Fill in the details below</p>
+      <h2>Add New Pet</h2>
+      <p>List a pet for adoption</p>
     </div>
     <form id="petForm">
       <div class="form-group">
         <label for="petName">Pet Name</label>
-        <input type="text" id="petName" placeholder="e.g. Nuni" required>
+        <input type="text" id="petName" placeholder="e.g. Buddy" required>
       </div>
       <div class="form-group">
         <label for="breed">Breed</label>
-        <input type="text" id="breed" placeholder="e.g. Pomeranian" required>
+        <input type="text" id="breed" placeholder="e.g. Golden Retriever" required>
       </div>
       <div class="form-group">
         <label for="age">Age (years)</label>
-        <input type="number" id="age" placeholder="1" required min="0">
+        <input type="number" id="age" placeholder="e.g. 2" required min="0">
       </div>
       <div class="form-group">
         <label for="status">Adoption Status</label>
@@ -38,18 +56,26 @@
           </select>
         </div>
       </div>
-      <button type="submit" class="add-btn">🐾 Add Pet</button>
+      <button type="submit" class="add-btn">＋ Add Pet Listing</button>
     </form>
   </section>
 
   <section class="pets-section">
     <div class="sec-head">
       <h2>Listings</h2>
+      <div class="filters">
+        <button class="ftab on" data-filter="All">All</button>
+        <button class="ftab" data-filter="Available">Available</button>
+        <button class="ftab" data-filter="Pending">Pending</button>
+        <button class="ftab" data-filter="Adopted">Adopted</button>
+      </div>
     </div>
     <div id="petContainer" class="pet-grid"></div>
   </section>
 
 </main>
+
+<div class="toast" id="toast"></div>
 
 <script src="app.js"></script>
 </body>
